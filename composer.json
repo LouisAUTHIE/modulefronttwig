@@ -1,0 +1,25 @@
+{
+    "name": "module/modulefronttwig",
+    "description": "Description de Module Avec twig sur le front",
+    "type": "prestashop-module",
+    "require": {
+        "php": ">=7.1",
+        "prestashop/prestashop": "^1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "PrestaShop\\Module\\ModuleFrontTwig\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "authors": [
+        {
+            "name": "Votre Nom",
+            "email": "votre.email@example.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
