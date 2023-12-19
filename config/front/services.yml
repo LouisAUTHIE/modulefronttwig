@@ -1,0 +1,6 @@
+services:
+  _defaults:
+    public: true
+
+  modulefronttwig.template.twig:
+    class: PrestaShop\Module\ModuleFrontTwig\Service\Template\Processor\TwigProcessor

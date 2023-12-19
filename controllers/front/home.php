@@ -6,15 +6,10 @@ class ModuleFrontTwigHomeModuleFrontController extends ModuleFrontController
     {
         parent::initContent();
         $this->context->smarty->assign([
-            'twigContent' => $this->module->twig->render("home.html.twig", [
+            'twigContent' => $this->get('modulefronttwig.template.twig')->render("home.html.twig", [
                 'name' => 'John Doe'
             ])
         ]);
-        $this->setTemplate('module:'.$this->module->name.'/views/templates/front/home.tpl');
-    }
-
-    public function display()
-    {
-        parent::display();
+        $this->setTemplate('module:'.$this->module->name.'/views/templates/front/smarty/home.tpl');
     }
 }
