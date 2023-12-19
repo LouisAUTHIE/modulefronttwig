@@ -1,16 +1,11 @@
 <?php
 
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
-
 if (!defined('_PS_VERSION_')) {
     exit;
 }
 
 class ModuleFrontTwig extends Module
 {
-    public Environment $twig;
-
     public function __construct()
     {
         $this->name = 'modulefronttwig';
@@ -27,8 +22,5 @@ class ModuleFrontTwig extends Module
         $this->description = $this->l('Description du module Front twig.');
 
         $this->confirmUninstall = $this->l('Êtes-vous sûr de vouloir désinstaller ?');
-
-        $loader = new FilesystemLoader(_PS_MODULE_DIR_. $this->name.'/views/templates/front');
-        $this->twig = new Environment($loader);
     }
 }
